@@ -370,10 +370,18 @@ text-align:center;
    ACHIEVEMENTS
 ======================= */
 
+/* =======================
+   ACHIEVEMENTS
+======================= */
+
 .achievements-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:25px;
+}
+
+.achievement{
+height:100%;
 }
 
 .achievement img{
@@ -385,22 +393,33 @@ margin-bottom:15px;
 transition:.5s;
 }
 
-.demo-placeholder{
-   text-align: center;
+.achievement img:hover{
+transform:scale(1.03);
 }
+
+.demo-placeholder{
+text-align:center;
+}
+
 /* =======================
    VIDEO SECTION
 ======================= */
 
 .video-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:25px;
+}
+
+.video-card{
+height:100%;
 }
 
 .video-card video{
 width:100%;
-border-radius:12px;
+height:250px;
+border-radius:15px;
+object-fit:cover;
 margin-bottom:15px;
 }
 
@@ -408,8 +427,21 @@ margin-bottom:15px;
 margin-bottom:10px;
 }
 
-.video-card:hover{
-transform:translateY(-8px);
+.video-card p{
+line-height:1.6;
+}
+
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media(max-width:768px){
+
+.video-grid{
+grid-template-columns:1fr;
+}
+
 }
 
 /* =======================
