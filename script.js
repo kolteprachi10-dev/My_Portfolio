@@ -222,31 +222,13 @@ window.addEventListener("load", () => {
 // ===============================
 
 function openImage(src) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-
-    if (!modal || !modalImg) return;
-
-    modal.style.display = "flex";
-    modalImg.src = src;
-    document.body.style.overflow = "hidden";
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("modalImg").src = src;
 }
 
 function closeImage() {
-    const modal = document.getElementById("imageModal");
-
-    if (!modal) return;
-
-    modal.style.display = "none";
-    document.body.style.overflow = "";
+    document.getElementById("imageModal").style.display = "none";
 }
-
-// Close popup using Escape key
-document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-        closeImage();
-    }
-});
 
 // ===============================
 // CONSOLE MESSAGE
