@@ -600,10 +600,6 @@ grid-template-columns:1fr;
 }
 }
 
-.clickable-img {
-    cursor: zoom-in;
-}
-
 .image-modal {
     display: none;
     position: fixed;
@@ -618,25 +614,20 @@ grid-template-columns:1fr;
     box-sizing: border-box;
 }
 
-.modal-img {
-    max-width: 95%;
+.image-modal img {
+    max-width: 95vw;
     max-height: 90vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    cursor: zoom-in;
-    transition: transform 0.3s ease;
-}
-
-.modal-img.zoomed {
-    transform: scale(1.5);
-    cursor: zoom-out;
+    display: block;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 30px;
+    top: 10px;
+    right: 25px;
     color: white;
-    font-size: 45px;
+    font-size: 40px;
     cursor: pointer;
-    z-index: 10000;
 }
