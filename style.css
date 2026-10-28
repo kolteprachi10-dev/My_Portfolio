@@ -614,7 +614,7 @@ grid-template-columns:1fr;
     box-sizing: border-box;
 }
 
-.image-modal img {
+.modal-img {
     max-width: 95vw;
     max-height: 90vh;
     width: auto;
